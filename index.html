@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <script>
+        window["__codeletBootstrap__"]=JSON.parse('... código original do Canva ...');
+    </script>
+
+    <script integrity="sha512-tmC41I8mDdEafKYU+uonPpd7aBUtaIPoM9H0Xlc3Wj30p0LomIF0JGMdxKeUubA3EOw0urN6S0qCEPV/0N3wGw==" src="/_sdk/46f7aaa18b973e86.telemetry_sdk.js"></script>
+
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#101f31" name="theme-color"/>
+
+    <title>APIMETEO &mdash; Consulte o clima</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap" rel="stylesheet"/>
+
+    <link href="style.css" rel="stylesheet"/>
+
+    <script defer src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+
+    <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+
+    <script integrity="sha512-idGAwBQRLg5Uj/GS6M9mupKjxya8dbnuORMMHhuMClWxJFWZlnL9TyVsM+GPKk/XuFWksgp7olXXcO+XRn9b+A==" src="/_sdk/0da7f84bd43207b9.data_sdk.js" type="text/javascript"></script>
+
+    <script integrity="sha512-nTs53cR0YFGgsMPSjIh9nn31iguDN1RlI0srrn6cP/X0WOxai/2uAL1Pb1JwUqlvUILKM03xdXI1tVOAlAzxZQ==" src="/_sdk/c4fa4592f8c578fe.editing_sdk.js" type="text/javascript"></script>
+
+    <script integrity="sha512-cP0WZPfVzPHNvtR9pZK9ltVQtIGnBaug7fVmtFl3R8ZSeEE73PquJeDrgIImGj0sPiyxGc6oJJYIgfuo/KyACg==" src="/_sdk/61fda7eb7851041c.resizing_sdk.js" type="text/javascript"></script>
+</head>
+
+<body class="w-full" data-template-id="__page-root" style="background: rgb(16, 31, 49);">
+
+    <div class="app-shell">
+        <div class="app-inner">
+
+            <header>
+                <div class="topbar">
+
+                    <div class="brand">
+                        <span aria-hidden="true" class="brand-mark">✳</span>
+
+                        <span class="canva-text" data-template-id="brand-name" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px; letter-spacing: 0.15rem;">
+                            Consulta Meteorológica
+                        </span>
+                    </div>
+
+                    <nav aria-label="Navegação principal" class="nav-links">
+                        <a class="canva-link" data-template-id="nav-consulta" href="#consulta" style="color: rgb(213, 228, 235); font-weight: 600; font-style: normal; font-size: 14px;">
+                            Consultar
+                        </a>
+
+                        <a class="canva-link" data-template-id="nav-sobre" href="#sobre" style="color: rgb(213, 228, 235); font-weight: 600; font-style: normal; font-size: 14px;">
+                            Sobre os dados
+                        </a>
+                    </nav>
+
+                </div>
+
+                <div class="intro">
+                    <div class="canva-text eyebrow" data-template-id="eyebrow" style="color: rgb(244, 195, 139); font-weight: 700; font-style: normal; font-size: 12px;">
+                        O TEMPO, DE UM JEITO MAIS CLARO
+                    </div>
+
+                    <h1 class="canva-text text-white" data-template-id="page-title" style="color: rgb(255, 255, 255); font-weight: 500; font-style: normal; font-size: 32px;">
+                        O céu da sua cidade, agora.
+                    </h1>
+
+                    <p class="canva-text mt-5 text-[#c4d2dd]" data-template-id="page-description" style="color: rgb(196, 210, 221); font-weight: 400; font-style: normal; font-size: 16px;">
+                        Consulte as condições atuais e descubra como ficam os próximos dias. Basta procurar uma cidade.
+                    </p>
+                </div>
+            </header>
+
+            <main>
+
+                <section aria-label="Consulta meteorológica" class="canva-panel search-panel" data-template-id="search-panel" id="consulta" style="background: rgb(247, 249, 248);">
+
+                    <form id="search-form" novalidate="">
+
+                        <label class="canva-text" data-template-id="city-label" for="city-input" style="color: rgb(16, 31, 49); font-weight: 700; font-style: normal; font-size: 16px;">
+                            Qual cidade você quer consultar?
+                        </label>
+
+                        <div class="search-row">
+
+                            <input
+                                aria-describedby="search-helper"
+                                autocomplete="off"
+                                class="canva-input"
+                                data-template-id="city-input-placeholder"
+                                id="city-input"
+                                maxlength="100"
+                                minlength="2"
+                                placeholder="Ex.: Salvador, Lisboa, São Paulo"
+                                style="color: rgb(16, 31, 49); font-weight: 400; font-style: normal; font-size: 16px;"
+                                type="search"
+                            />
+
+                            <button
+                                class="canva-button search-button"
+                                data-template-id="search-button"
+                                id="search-button"
+                                style="background: rgb(212, 147, 76); color: rgb(23, 35, 53); font-weight: 700; font-style: normal; font-size: 16px;"
+                                type="submit"
+                            >
+                                Buscar previsão
+                            </button>
+
+                        </div>
+
+                        <button class="location-button" id="location-button" type="button">
+                            <i aria-hidden="true" data-lucide="map-pin"></i>
+
+                            <span class="canva-text" data-template-id="location-button-label" style="color: rgb(40, 69, 90); font-weight: 700; font-style: normal; font-size: 14px;">
+                                Usar minha localização
+                            </span>
+                        </button>
+
+                        <p class="canva-text helper" data-template-id="search-helper" id="search-helper" style="color: rgb(96, 117, 138); font-weight: 400; font-style: normal; font-size: 13px;">
+                            Se houver cidades com o mesmo nome, você poderá escolher a localização certa.
+                        </p>
+
+                    </form>
+
+                    <div aria-live="polite" class="status" hidden="" id="loading" role="status">
+                        <span aria-hidden="true" class="spinner"></span>
+
+                        <span class="canva-text" data-template-id="loading-label" style="color: rgb(40, 69, 90); font-weight: 400; font-style: normal; font-size: 16px;">
+                            Consultando o céu...
+                        </span>
+                    </div>
+
+                    <p class="status error" hidden="" id="message" role="alert"></p>
+
+                    <div class="initial" id="initial">
+
+                        <div aria-hidden="true" class="initial-symbol">☀</div>
+
+                        <h2 class="canva-text font-semibold" data-template-id="initial-title" style="color: rgb(16, 31, 49); font-weight: 600; font-style: normal; font-size: 24px;">
+                            Sua previsão começa aqui
+                        </h2>
+
+                        <p class="canva-text mt-2" data-template-id="initial-description" style="color: rgb(87, 112, 131); font-weight: 400; font-style: normal; font-size: 16px;">
+                            Digite o nome de uma cidade ou use sua localização para ver o tempo agora e nos próximos dias.
+                        </p>
+
+                    </div>
+
+                    <section aria-labelledby="choices-title" class="choices" hidden="" id="choices">
+
+                        <h2 class="canva-text" data-template-id="choices-title" id="choices-title" style="color: rgb(16, 31, 49); font-weight: 500; font-style: normal; font-size: 24px;">
+                            Qual dessas cidades você procura?
+                        </h2>
+
+                        <div class="choice-list" id="choice-list"></div>
+
+                    </section>
+
+                    <section aria-label="Resultado meteorológico" aria-live="polite" class="result" hidden="" id="result">
+
+                        <div class="canva-card weather-card" data-template-id="weather-card" style="background: rgb(232, 240, 241);">
+
+                            <p class="location-name" id="location-name"></p>
+
+                            <div class="weather-main">
+
+                                <div>
+                                    <div aria-hidden="true" class="weather-icon" id="weather-icon"></div>
+
+                                    <h2 class="condition mt-2" id="condition"></h2>
+                                </div>
+
+                                <div class="temperature" id="temperature"></div>
+
+                            </div>
+
+                            <div class="metrics">
+
+                                <div class="metric">
+                                    <span class="canva-text metric-label" data-template-id="feels-label" style="color: rgb(96, 117, 138); font-weight: 400; font-style: normal; font-size: 13px;">
+                                        Sensação térmica
+                                    </span>
+
+                                    <span class="metric-value" id="feels"></span>
+                                </div>
+
+                                <div class="metric">
+                                    <span class="canva-text metric-label" data-template-id="humidity-label" style="color: rgb(96, 117, 138); font-weight: 400; font-style: normal; font-size: 13px;">
+                                        Umidade
+                                    </span>
+
+                                    <span class="metric-value" id="humidity"></span>
+                                </div>
+
+                                <div class="metric">
+                                    <span class="canva-text metric-label" data-template-id="wind-label" style="color: rgb(96, 117, 138); font-weight: 400; font-style: normal; font-size: 13px;">
+                                        Vento
+                                    </span>
+
+                                    <span class="metric-value" id="wind"></span>
+                                </div>
+
+                                <div class="metric" hidden="" id="sunrise-metric">
+                                    <span class="canva-text metric-label" data-template-id="sunrise-label" style="color: rgb(96, 117, 138); font-weight: 400; font-style: normal; font-size: 13px;">
+                                        Nascer do sol
+                                    </span>
+
+                                    <span class="metric-value" id="sunrise"></span>
+                                </div>
+
+                                <div class="metric" hidden="" id="sunset-metric">
+                                    <span class="canva-text metric-label" data-template-id="sunset-label" style="color: rgb(96, 117, 138); font-weight: 400; font-style: normal; font-size: 13px;">
+                                        Pôr do sol
+                                    </span>
+
+                                    <span class="metric-value" id="sunset"></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="forecast">
+
+                            <h2 class="canva-text" data-template-id="forecast-title" style="color: rgb(16, 31, 49); font-weight: 500; font-style: normal; font-size: 24px;">
+                                Próximos dias
+                            </h2>
+
+                            <div class="days" id="days"></div>
+
+                        </div>
+
+                    </section>
+
+                </section>
+
+                <section aria-labelledby="about-title" class="about" id="sobre">
+
+                    <span class="about-icon">
+                        <i aria-hidden="true" data-lucide="info"></i>
+                    </span>
+
+                    <div>
+
+                        <h2 class="canva-text" data-template-id="about-title" id="about-title" style="color: rgb(255, 255, 255); font-weight: 500; font-style: normal; font-size: 24px;">
+                            De onde vem a previsão?
+                        </h2>
+
+                        <p class="canva-text mt-1" data-template-id="about-description" style="color: rgb(213, 228, 235); font-weight: 400; font-style: normal; font-size: 16px;">
+                            As informações são fornecidas pelo Open-Meteo. A previsão pode mudar: consulte novamente para receber os dados mais recentes.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+            <footer>
+
+                <span class="canva-text" data-template-id="footer-brand" style="color: rgb(175, 194, 207); font-weight: 400; font-style: normal; font-size: 13px;">
+                    APIMETEO &middot; O clima mais perto de você.
+                </span>
+
+                <span class="canva-text" data-template-id="source-note" style="color: rgb(175, 194, 207); font-weight: 400; font-style: normal; font-size: 13px;">
+                    Dados meteorológicos: Open-Meteo.
+                </span>
+
+            </footer>
+
+        </div>
+    </div>
+
+    <template id="choice-template">
+        <button class="canva-button choice" data-template-id="choice-item" type="button"></button>
+    </template>
+
+    <template id="day-template">
+        <article class="canva-card day" data-template-id="day-card">
+
+            <div class="canva-text day-name" data-template-id="day-name"></div>
+
+            <div aria-hidden="true" class="day-icon"></div>
+
+            <div class="canva-text day-condition" data-template-id="day-condition"></div>
+
+            <div class="day-temp">
+                <span class="canva-text" data-template-id="day-high"></span>
+
+                <span class="canva-text day-low" data-template-id="day-low"></span>
+            </div>
+
+        </article>
+    </template>
+
+</body>
+</html>
